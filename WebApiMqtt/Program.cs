@@ -1,3 +1,4 @@
+using Services.DatabaseService;
 using Services.Interface;
 using Services.MqttService;
 
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHostedService<MqttClientWorker>();
 builder.Services.AddSingleton<IMqttClientPublish, MqttClientPublish>();
+builder.Services.AddSingleton<IInfluxDBService, InfluxDBService>();
 
 var app = builder.Build();
 

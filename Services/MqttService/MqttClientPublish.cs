@@ -9,6 +9,7 @@ namespace Services.MqttService;
 
 public class MqttClientPublish : IMqttClientPublish
 {
+  
     public async Task Publish_Application_Message(string number)
     {
         /*number
